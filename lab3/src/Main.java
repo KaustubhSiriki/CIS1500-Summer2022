@@ -1,3 +1,4 @@
+import java.text.NumberFormat;
 import java.util.Scanner;
 
 public class Main {
@@ -21,6 +22,43 @@ public class Main {
         double num5 = Double.parseDouble(keyboard.nextLine());
 
         double avg = (num1 + num2 + num3 + num4 + num5) / 5;
-        
+
+        double min = num1;
+
+        if (num2 < min){
+            min = num2;
+        }
+        if (num3 < min){
+            min = num3;
+        }
+        if (num4 < min){
+            min = num4;
+        }
+        if (num5 < min){
+            min = num5;
+        }
+
+        double max = num1;
+
+        if (num2 > max){
+            max = num2;
+        }
+        if (num3 > max){
+            max = num3;
+        }
+        if (num4 > max){
+            max = num4;
+        }
+        if (num5 > max){
+            max = num5;
+        }
+
+        double stand_dev = Math.sqrt((Math.pow(avg - num1, 2) + Math.pow(avg - num2, 2) + Math.pow(avg - num3, 2) + Math.pow(avg - num4, 2) + Math.pow(avg - num5, 2)) / 5);
+
+        NumberFormat numberFormat = NumberFormat.getNumberInstance();
+        numberFormat.setMaximumFractionDigits(3);
+
+        System.out.println("Min: " + min + ", Max: " + max + ", Avg: " + avg + ", Standard Dev: " + stand_dev);
     }
+
 }
