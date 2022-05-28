@@ -21,7 +21,7 @@ public class Main {
         System.out.println("Enter Number 5: ");
         double num5 = Double.parseDouble(keyboard.nextLine());
 
-        double avg = (num1 + num2 + num3 + num4 + num5) / 5;
+        double avg = (num1 + num2 + num3 + num4 + num5) / 5.0;
 
         double min = num1;
 
@@ -58,7 +58,10 @@ public class Main {
         NumberFormat numberFormat = NumberFormat.getNumberInstance();
         numberFormat.setMaximumFractionDigits(3);
 
-        System.out.println("Min: " + min + ", Max: " + max + ", Avg: " + avg + ", Standard Dev: " + stand_dev);
+        String avg_round = numberFormat.format(avg);
+        String dev_round = numberFormat.format(stand_dev);
+
+        System.out.println("Min: " + min + ", Max: " + max + ", Avg: " + avg_round + ", Standard Dev: " + dev_round);
     }
 
 }
