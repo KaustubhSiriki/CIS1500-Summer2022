@@ -28,19 +28,30 @@ public class Main {
                 System.out.println("You Lose!");
             } else if (player.equalsIgnoreCase("Rock") && (computer.equalsIgnoreCase("Scissors") || computer.equalsIgnoreCase("Lizard"))) {
                 System.out.println("You Win!");
-            } else {
-                System.out.println("You Tied!");
-            }
-
-            if (player.equalsIgnoreCase("Paper") && (computer.equalsIgnoreCase("Paper") || computer.equalsIgnoreCase("Spock"))) {
-                System.out.println("You Lose!");
             } else if (player.equalsIgnoreCase("Paper") && (computer.equalsIgnoreCase("Scissors") || computer.equalsIgnoreCase("Lizard"))) {
+                System.out.println("You Lose!");
+            } else if (player.equalsIgnoreCase("Paper") && (computer.equalsIgnoreCase("Rock") || computer.equalsIgnoreCase("Spock"))) {
+                System.out.println("You Win!");
+            } else if (player.equalsIgnoreCase("Scissors") && (computer.equalsIgnoreCase("Rock") || computer.equalsIgnoreCase("Spock"))) {
+                System.out.println("You Lose!");
+            } else if (player.equalsIgnoreCase("Scissors") && (computer.equalsIgnoreCase("Paper") || computer.equalsIgnoreCase("Lizard"))) {
+                System.out.println("You Win!");
+            } else if (player.equalsIgnoreCase("Spock") && (computer.equalsIgnoreCase("Paper") || computer.equalsIgnoreCase("Lizard"))) {
+                System.out.println("You Lose!");
+            } else if (player.equalsIgnoreCase("Spock") && (computer.equalsIgnoreCase("Scissors") || computer.equalsIgnoreCase("Rock"))) {
+                System.out.println("You Win!");
+            } else if (player.equalsIgnoreCase("Lizard") && (computer.equalsIgnoreCase("Scissors") || computer.equalsIgnoreCase("Rock"))) {
+                System.out.println("You Lose!");
+            } else if (player.equalsIgnoreCase("Lizard") && (computer.equalsIgnoreCase("Paper") || computer.equalsIgnoreCase("Spock"))) {
                 System.out.println("You Win!");
             } else {
                 System.out.println("You Tied!");
             }
 
-            menu_option = "none";
+            while (menu_option.equalsIgnoreCase("play")){
+                System.out.println("Game Over! Would you like to play again, " + name + "? \n- Play \n- Exit");
+                menu_option = keyboard.nextLine();
+            }
 
         }
     }
