@@ -13,7 +13,7 @@ public class Main {
         String computer = plays[(int)(Math.random() * 5)];
 
         while (menu_option.equalsIgnoreCase("play")){
-            System.out.println("You'll play the computer!");
+            System.out.println("You'll play the computer!\n");
             System.out.println("Select an option: \n- Rock \n- Paper \n- Scissors \n- Lizard \n- Spock");
             String player = keyboard.nextLine();
 
@@ -48,7 +48,7 @@ public class Main {
                 System.out.println("You Tied!");
             }
 
-            while (menu_option.equalsIgnoreCase("play")){
+            if (menu_option.equalsIgnoreCase("play")){
                 System.out.println("Game Over! Would you like to play again, " + name + "? \n- Play \n- Exit");
                 menu_option = keyboard.nextLine();
             }
